@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QAcore</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #00ffea;
+      --highlight: #ff00aa;
+      --background: #0a0a0a;
+      --text: #e0e0e0;
+      --card-bg: #1a1a1a;
+      --sidebar-bg: #111;
+      --menu-hover: #003d3d;
+      --accent: #ff7f00;
+      --footer-bg: #111;
+      --footer-text: #bbb;
+    }
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background-color: var(--background);
+      background-image: url('https://www.transparenttextures.com/patterns/circuits.png');
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a192f, #3b0a59, #008b8b);
+      color: var(--primary);
+      padding: 2rem;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+      box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    }
+
+    header span {
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: var(--sidebar-bg);
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,255,255,0.1);
+      padding: 1rem;
+      position: sticky;
+      top: 2rem;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 0.75rem;
+      border-radius: 8px;
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background-color: var(--menu-hover);
+      color: #000;
+    }
+
+    .content {
+      flex-grow: 1;
+      padding-left: 2rem;
+      max-width: 100%;
+    }
+
+    section {
+      background-color: var(--card-bg);
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,255,255,0.04);
+    }
+
+    section h2 {
+      color: var(--highlight);
+    }
+
+    section h3 {
+      margin-top: 1.5rem;
+      color: var(--primary);
+    }
+
+    .foto-qa {
+      float: right;
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+      width: 200px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 255, 255, 0.1);
+    }
+
+    a {
+      color: var(--primary);
+    }
+
+    a:hover {
+      color: var(--highlight);
+    }
+
+    .footer {
+      background-color: var(--footer-bg);
+      padding: 2rem;
+      color: var(--footer-text);
+    }
+
+    .footer h5 {
+      font-size: 1.2rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .footer ul li a {
+      color: var(--footer-text);
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      color: var(--primary);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 1.5rem;
+    }
+
+    .apresentacao {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .texto-apresentacao {
+      flex: 1;
+    }
+
+    .imagem-apresentacao {
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        flex-direction: column;
+        padding: 1rem;
+      }
+
+      .sidebar {
+        max-width: 100%;
+        margin-bottom: 1rem;
+      }
+
+      .content {
+        padding-left: 0;
+      }
+
+      .apresentacao {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .imagem-apresentacao {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>QAcore</span>
+  </header>
+
+  <div class="main-content container-fluid">
+    <div class="row">
+      <div class="col-md-3">
+        <nav class="sidebar">
+          <a href="index.html">Início</a>
+          <a href="artigos.html">Artigos</a>
+          <a href="#literatura">Literatura</a>
+          <a href="#ferramentas">Ferramentas</a>
+          <a href="produto.html">Produto</a>
+          <a href="#automacao">Automação</a>
+          <a href="missao.html">Missão</a>          
+        </nav>
+      </div>
+
+      <div class="col-md-9">
+        <main class="content">
+          <section id="apresentacao-alan">
+            <h2>Sobre mim</h2>
+            <div class="apresentacao">
+              <div class="texto-apresentacao">
+                <p>Olá! Me chamo <strong>Alan dos Santos Rodrigues</strong>, tenho <strong>34 anos</strong> e atuo há mais de cinco anos na área de tecnologia, com foco especial em qualidade de software (QA).</p>
+                <p>Sou uma pessoa autista, o que me proporciona uma maneira única de observar padrões e detalhes — algo que se alinha perfeitamente com minha paixão por garantir a excelência dos produtos digitais.</p>
+                <p>Algo muito especial para mim é que, apesar de algumas sensibilidades comuns no espectro autista, tenho a felicidade de poder ouvir música sem desconforto. A música, inclusive, me inspira e me acompanha em muitos momentos do meu dia.</p>
+                <p>Meu <strong>hiperfoco</strong> é o universo dos games. Desde que joguei videogame pela primeira vez, descobri um mundo que nunca mais deixei. Tenho um carinho especial por jogos retrô — aqueles que marcaram gerações e continuam vivos na minha memória e no meu coração.</p>
+                <p>Acima de tudo, sou pai. Amo estar com a minha filha e aprendo muito com ela todos os dias. A paternidade me ensina sobre paciência, cuidado e amor genuíno — valores que também tento levar para o meu trabalho e convivência profissional.</p>
+              </div>
+              <div class="imagem-apresentacao">
+                <img src="images/1715576206892.jpg" alt="Foto do QA" class="foto-qa">
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-2">
+          <h5>Sobre</h5>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="#">Visão</a></li>
+            <li><a href="#">Valores</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5>Treinamento</h5>
+          <ul>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Certificações</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5>Suporte</h5>
+          <ul>
+            <li><a href="#">Documentação</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contato</h5>
+          <ul>
+            <li>Email: contato@qaexemplo.com</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Redes Sociais</h5>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/alan-dos-santos-rodrigues-84a275a1/">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom mt-4">
+        &copy; 2025 QAcore. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

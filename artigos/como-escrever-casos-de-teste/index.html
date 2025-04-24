@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QAcore - Como Escrever Casos de Teste</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #00ffea;
+      --highlight: #ff00aa;
+      --background: #0a0a0a;
+      --text: #f2f2f2;
+      --card-bg: #121212;
+      --footer-bg: #111;
+      --footer-text: #ccc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto Mono', monospace;
+      background-color: var(--background);
+      color: var(--text);
+    }
+
+    header {
+      background: linear-gradient(135deg, #0a192f, #3b0a59, #008b8b);
+      color: var(--primary);
+      padding: 2rem;
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: 0.12rem;
+      text-transform: uppercase;
+      font-family: 'Orbitron', sans-serif;
+      box-shadow: 0 4px 8px rgba(0, 255, 255, 0.2);
+    }
+
+    header span {
+      background: linear-gradient(90deg, var(--primary), var(--highlight));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      display: inline-block;
+    }
+
+    a.back-link {
+      color: var(--primary);
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    a.back-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .article-container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00e0ff33;
+    }
+
+    h2 {
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-wrapper iframe {
+      width: 100%;
+      max-width: 640px;
+      height: 360px;
+      border: 2px solid #00e0ff55;
+      border-radius: 8px;
+      display: block;
+      margin: 2rem auto;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: var(--footer-text);
+      padding: 2rem 1rem;
+      margin-top: 4rem;
+    }
+
+    .footer h5 {
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer ul li a {
+      color: var(--footer-text);
+      text-decoration: none;
+    }
+
+    .footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #777;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <span>QAcore</span>
+  </header>
+
+  <main class="article-container">
+    <a href="../../" class="back-link">&larr; Voltar</a>
+
+    <h2>Como Escrever Casos de Teste</h2>
+
+    <p>Casos de teste são essenciais para garantir que funcionalidades específicas do sistema funcionem como esperado. Escrever bons casos de teste exige clareza, organização e foco nos critérios de aceitação definidos para cada funcionalidade.</p>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="Como Escrever Casos de Teste" 
+              allowfullscreen>
+      </iframe>
+    </div>
+
+    <p>Um bom caso de teste deve conter título, objetivo, pré-condições, passos para execução e o resultado esperado. Evite ambiguidade e utilize uma linguagem direta. Idealmente, eles devem ser reprodutíveis por qualquer pessoa da equipe, independentemente do nível técnico.</p>
+  </main>
+
+ <footer class="footer">
+    <div class="container">
+      <div class="row text-start">
+        <div class="col-md-2">
+          <h5>Sobre</h5>
+          <ul>
+            <li><a href="#">Quem somos</a></li>
+            <li><a href="#">Missão</a></li>
+            <li><a href="#">Visão</a></li>
+            <li><a href="#">Valores</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5>Treinamento</h5>
+          <ul>
+            <li><a href="#">Cursos</a></li>
+            <li><a href="#">Certificações</a></li>
+          </ul>
+        </div>
+        <div class="col-md-2">
+          <h5>Suporte</h5>
+          <ul>
+            <li><a href="#">Documentação</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Contato</h5>
+          <ul>
+            <li>Email: contato@qaexemplo.com</li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>Redes Sociais</h5>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/alan-dos-santos-rodrigues-84a275a1/">LinkedIn</a></li>
+            <li><a href="#">YouTube</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom mt-4">
+        &copy; 2025 QAcore. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
