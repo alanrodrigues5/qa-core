@@ -6,7 +6,7 @@
   <title>QAcore - Como Escrever Casos de Teste</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -16,28 +16,51 @@
 </head>
 <body>
 
-  <header>
-    <span>QAcore</span>
+  <header class="d-flex justify-content-center align-items-center py-3 position-relative">
+    <span class="fs-3">QAcore</span>
+    <button class="btn btn-outline-primary d-md-none position-absolute end-0 me-3" id="menu-toggle" aria-label="Menu">
+      &#9776;
+    </button>
   </header>
 
-  <main class="article-container">
-    <a href="../../" class="back-link">&larr; Voltar</a>
+  <div class="container-fluid main-content">
+    <div class="row">
+      <div class="col-md-3">
+        <nav class="sidebar" id="sidebar">
+          <a href="../../">Início</a>
+          <a href="../artigos/">Artigos</a>
+          <a href="../../literatura/">Literatura</a>
+          <a href="../../ferramentas/">Ferramentas</a>
+          <a href="../../produto/">Produto</a>
+          <a href="../../automacao/">Automação</a>
+          <a href="../../missao/">Missão</a>
+          <a href="../../sobre-mim/">Sobre Mim</a>
+        </nav>
+      </div>
 
-    <h2>Como Escrever Casos de Teste</h2>
+      <div class="col-md-9">
+        <main class="content px-3">
+          <section id="artigo" class="mb-4">
+            <a href="../../" class="btn btn-secondary mb-3">&larr; Voltar</a>
 
-    <p>Casos de teste são essenciais para garantir que funcionalidades específicas do sistema funcionem como esperado. Escrever bons casos de teste exige clareza, organização e foco nos critérios de aceitação definidos para cada funcionalidade.</p>
+            <h2>Como Escrever Casos de Teste</h2>
 
-    <div class="video-wrapper">
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-              title="Como Escrever Casos de Teste" 
-              allowfullscreen>
-      </iframe>
+            <p>Casos de teste são essenciais para garantir que funcionalidades específicas do sistema funcionem como esperado. Escrever bons casos de teste exige clareza, organização e foco nos critérios de aceitação definidos para cada funcionalidade.</p>
+
+            <div class="ratio ratio-16x9 my-4">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                      title="Como Escrever Casos de Teste" 
+                      allowfullscreen></iframe>
+            </div>
+
+            <p>Um bom caso de teste deve conter título, objetivo, pré-condições, passos para execução e o resultado esperado. Evite ambiguidade e utilize uma linguagem direta. Idealmente, eles devem ser reprodutíveis por qualquer pessoa da equipe, independentemente do nível técnico.</p>
+          </section>
+        </main>
+      </div>
     </div>
+  </div>
 
-    <p>Um bom caso de teste deve conter título, objetivo, pré-condições, passos para execução e o resultado esperado. Evite ambiguidade e utilize uma linguagem direta. Idealmente, eles devem ser reprodutíveis por qualquer pessoa da equipe, independentemente do nível técnico.</p>
-  </main>
-
- <footer class="footer">
+  <footer class="footer mt-5">
     <div class="container">
       <div class="row text-start">
         <div class="col-md-3">
@@ -55,14 +78,23 @@
         </div>
       </div>
 
-      <div class="footer-bottom mt-4">
+      <div class="footer-bottom text-center mt-4">
         &copy; 2025 QAcore. Todos os direitos reservados.
       </div>
     </div>
   </footer>
 
-
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para o botão hamburguer -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
