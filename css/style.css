@@ -95,14 +95,14 @@ section h2 {
   color: var(--highlight);
 }
 
-/* Remover personalizações específicas para os links */
+/* Personalização dos links */
 a {
-  color: initial; /* Cor padrão de links */
+  color: #0000EE; /* Azul padrão da web */
   text-decoration: none; /* Remover sublinhado */
 }
 
 a:hover {
-  color: initial; /* Mantém a cor padrão ao passar o mouse */
+  color: #551A8B; /* Cor mais escura de azul para hover */
   text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
