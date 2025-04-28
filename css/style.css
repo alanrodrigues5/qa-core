@@ -95,6 +95,21 @@ section h2 {
   color: var(--highlight);
 }
 
+/* Estilo para os tópicos da página Missão */
+.missao-page h3 {
+  color: var(--primary); /* Cor roxa para os títulos dos tópicos */
+  font-size: 1.75rem; /* Tamanho confortável para os títulos */
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Sombreamento suave */
+  margin-bottom: 1rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave de cor */
+}
+
+.missao-page h3:hover {
+  color: var(--highlight); /* Cor de destaque ao passar o mouse */
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* Aumenta o sombreamento ao passar o mouse */
+}
+
 /* Personalização dos links */
 a {
   color: #0000EE; /* Azul padrão da web */
