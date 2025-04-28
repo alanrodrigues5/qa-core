@@ -180,3 +180,25 @@ a:hover {
     margin-top: 1rem;
   }
 }
+
+/* Estilo para a numeração dos tópicos */
+section#sobre-qa {
+  counter-reset: topic; /* Inicia o contador para numerar os tópicos */
+}
+
+.highlight h3 {
+  position: relative;
+  padding-left: 30px; /* Espaço para o número */
+  font-size: 1.25rem;
+  color: var(--primary); /* Cor roxa para os títulos */
+}
+
+.highlight h3::before {
+  content: counter(topic) ". "; /* Insere a numeração */
+  counter-increment: topic; /* Incrementa o contador automaticamente */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.5rem;
+  color: var(--highlight); /* Cor rosa que combina com o layout */
+}
