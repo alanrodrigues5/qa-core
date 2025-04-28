@@ -95,12 +95,15 @@ section h2 {
   color: var(--highlight);
 }
 
+/* Remover personalizações específicas para os links */
 a {
-  color: var(--primary);
+  color: initial; /* Cor padrão de links */
+  text-decoration: none; /* Remover sublinhado */
 }
 
 a:hover {
-  color: var(--highlight);
+  color: initial; /* Mantém a cor padrão ao passar o mouse */
+  text-decoration: underline; /* Sublinha ao passar o mouse */
 }
 
 .footer {
