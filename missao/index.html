@@ -14,14 +14,17 @@
 </head>
 <body>
 
-  <header>
-    <span>QAcore</span>
+  <header class="d-flex justify-content-center align-items-center py-3 position-relative">
+    <span class="fs-3">QAcore</span>
+    <button class="btn btn-outline-primary d-md-none position-absolute end-0 me-3" id="menu-toggle" aria-label="Menu">
+      &#9776;
+    </button>
   </header>
 
   <div class="main-content container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
           <a href="index.html">Início</a>
           <a href="artigos.html">Artigos</a>
           <a href="#literatura">Literatura</a>
@@ -32,10 +35,10 @@
       </div>
 
       <div class="col-md-9">
-        <main class="content">
+        <main class="content px-3">
           <section id="sobre-qa">
             <h2>O papel colaborativo do QA</h2>
-            <img src="../images/auto-retrato.jpg" alt="Foto do QA" class="foto-qa">
+            <img src="../images/auto-retrato.jpg" alt="Foto do QA" class="foto-qa rounded float-start me-3 mb-3" style="max-width: 250px; height: auto;">
 
             <h3>1. Muito além de testar</h3>
             <p>O papel do QA moderno vai além da execução de testes. Ele atua desde as fases iniciais do projeto, contribuindo com a definição clara de requisitos e decisões técnicas que impactam diretamente na qualidade do produto.</p>
@@ -63,7 +66,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer mt-5">
     <div class="container">
       <div class="row text-start">
         <div class="col-md-2">
@@ -104,7 +107,7 @@
         </div>
       </div>
 
-      <div class="footer-bottom mt-4">
+      <div class="footer-bottom text-center mt-4">
         &copy; 2025 QAcore. Todos os direitos reservados.
       </div>
     </div>
@@ -112,5 +115,16 @@
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para o botão hamburguer -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
+
 </body>
 </html>
