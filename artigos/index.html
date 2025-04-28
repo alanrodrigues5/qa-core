@@ -10,16 +10,21 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <header>
-    <span>QAcore</span>
-    <button class="btn btn-outline-primary d-md-none" id="menu-toggle" aria-label="Menu">&#9776;</button>
+  <header class="d-flex justify-content-center align-items-center py-3 position-relative">
+    <span class="fs-3">QAcore</span>
+    <!-- Botão hamburguer -->
+    <button class="btn btn-outline-primary d-md-none position-absolute end-0 me-3" id="menu-toggle" aria-label="Menu">
+      &#9776;
+    </button>
   </header>
 
-  <div class="main-content container-fluid">
+  <div class="container-fluid main-content">
     <div class="row">
       <div class="col-md-3">
         <nav class="sidebar" id="sidebar">
@@ -34,7 +39,7 @@
       </div>
 
       <div class="col-md-9">
-        <main class="content">
+        <main class="content px-3">
           <section id="inicio">
             <h2>Bem-vindo!</h2>
             <p>Este portal reúne recursos para o treinamento da equipe de QA. Abaixo estão os artigos e materiais para estudo:</p>
@@ -56,7 +61,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer mt-5">
     <div class="container">
       <div class="row text-start">
         <div class="col-md-2">
@@ -97,7 +102,7 @@
         </div>
       </div>
 
-      <div class="footer-bottom mt-4">
+      <div class="footer-bottom text-center mt-4">
         &copy; 2025 QAcore. Todos os direitos reservados.
       </div>
     </div>
