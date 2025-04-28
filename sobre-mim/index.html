@@ -3,78 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>QAcore</title>
+  <title>Sobre Mim - QAcore</title>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Estilos personalizados -->
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-  <header>
-    <span>QAcore</span>
+  <header class="d-flex justify-content-center align-items-center py-3 position-relative">
+    <span class="fs-3">QAcore</span>
+    <!-- Botão hamburguer -->
+    <button class="btn btn-outline-primary d-md-none position-absolute end-0 me-3" id="menu-toggle" aria-label="Menu">
+      &#9776;
+    </button>
   </header>
 
-  <!-- Navbar com menu hamburguer -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">QAcore</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="index.html">Início</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="artigos.html">Artigos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#literatura">Literatura</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#ferramentas">Ferramentas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="produto.html">Produto</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#automacao">Automação</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="missao.html">Missão</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <div class="main-content container-fluid">
+  <div class="container-fluid main-content">
     <div class="row">
       <div class="col-md-3">
-        <nav class="sidebar">
-          <a href="index.html">Início</a>
-          <a href="artigos.html">Artigos</a>
+        <nav class="sidebar" id="sidebar">
+          <a href="/">Início</a>
+          <a href="artigos/">Artigos</a>
           <a href="#literatura">Literatura</a>
           <a href="#ferramentas">Ferramentas</a>
-          <a href="produto.html">Produto</a>
+          <a href="produto/">Produto</a>
           <a href="#automacao">Automação</a>
-          <a href="missao.html">Missão</a>          
+          <a href="missao/">Missão</a>
         </nav>
       </div>
 
       <div class="col-md-9">
-        <main class="content">
-          <section id="apresentacao-alan" class="d-flex flex-column align-items-start">
+        <main class="content px-3">
+          <section id="apresentacao-alan">
             <h2>Sobre mim</h2>
-            <div class="apresentacao d-flex align-items-start" style="position: relative;">
+            <div class="d-flex align-items-start" style="position: relative;">
               <div class="imagem-apresentacao position-absolute" style="top: 0; right: 0; margin-top: 20px; margin-right: 20px;">
                 <!-- Foto ajustada para estar no canto superior direito -->
-                <img src="../images/auto-retrato.jpg" alt="Foto do QA" class="foto-qa img-fluid rounded-circle" style="max-width: 150px; height: auto;">
+                <img src="../images/auto-retrato.jpg" alt="Foto de Alan dos Santos Rodrigues" class="foto-qa img-fluid rounded-circle" style="max-width: 150px; height: auto;">
               </div>
               <div class="texto-apresentacao" style="margin-top: 40px; padding-right: 180px;">
                 <p>Olá! Me chamo <strong>Alan dos Santos Rodrigues</strong>, tenho <strong>34 anos</strong> e atuo há mais de cinco anos na área de tecnologia, com foco especial em qualidade de software (QA).</p>
@@ -90,7 +61,7 @@
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer mt-5">
     <div class="container">
       <div class="row text-start">
         <div class="col-md-2">
@@ -119,7 +90,7 @@
         <div class="col-md-3">
           <h5>Contato</h5>
           <ul>
-            <li>Email: contato@qaexemplo.com</li>
+            <li>contato@qaexemplo.com</li>
           </ul>
         </div>
         <div class="col-md-3">
@@ -131,7 +102,7 @@
         </div>
       </div>
 
-      <div class="footer-bottom mt-4">
+      <div class="footer-bottom text-center mt-4">
         &copy; 2025 QAcore. Todos os direitos reservados.
       </div>
     </div>
@@ -139,5 +110,15 @@
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para o botão hamburguer -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
