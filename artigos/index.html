@@ -42,8 +42,10 @@
       background: linear-gradient(135deg, #0a192f, #3b0a59, #008b8b);
       color: var(--primary);
       padding: 2rem;
-      text-align: center;
-      font-size: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 2.5rem;
       font-weight: bold;
       letter-spacing: 0.12rem;
       text-transform: uppercase;
@@ -55,6 +57,23 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline-block;
+    }
+
+    #menu-toggle {
+      font-size: 2rem;
+      background: none;
+      border: 2px solid var(--primary);
+      color: var(--primary);
+      border-radius: 8px;
+      padding: 0.25rem 0.75rem;
+      cursor: pointer;
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      #menu-toggle {
+        display: block;
+      }
     }
 
     .main-content {
@@ -164,6 +183,11 @@
       .sidebar {
         max-width: 100%;
         margin-bottom: 1rem;
+        display: none;
+      }
+
+      .sidebar.active {
+        display: block;
       }
 
       .content {
@@ -176,12 +200,13 @@
 
   <header>
     <span>QAcore</span>
+    <button class="btn btn-outline-primary d-md-none" id="menu-toggle" aria-label="Menu">&#9776;</button>
   </header>
 
   <div class="main-content container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <nav class="sidebar">
+        <nav class="sidebar" id="sidebar">
           <a href="../">Início</a>
           <a href="../artigos/">Artigos</a>
           <a href="../literatura/">Literatura</a>
@@ -264,5 +289,15 @@
 
   <!-- Bootstrap Bundle JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script para o botão hamburguer -->
+  <script>
+    const toggleButton = document.getElementById('menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+
+    toggleButton.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
