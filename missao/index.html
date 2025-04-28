@@ -15,14 +15,18 @@
 </head>
 <body>
 
-  <header class="missao-page">
-    <span>QAcore</span>
+  <header class="d-flex justify-content-center align-items-center py-3 position-relative">
+    <span class="fs-3">QAcore</span>
+    <!-- Botão hamburguer -->
+    <button class="btn btn-outline-primary d-md-none position-absolute end-0 me-3" id="menu-toggle" aria-label="Menu">
+      &#9776;
+    </button>
   </header>
 
   <div class="missao-page main-content container-fluid">
     <div class="row">
       <div class="col-md-3">
-        <nav class="missao-page sidebar" id="sidebar">
+        <nav class="sidebar" id="sidebar">
           <a href="index.html">Início</a>
           <a href="artigos.html">Artigos</a>
           <a href="#literatura">Literatura</a>
@@ -136,6 +140,5 @@
       sidebar.classList.toggle('active');
     });
   </script>
-
 </body>
 </html>
