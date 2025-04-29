@@ -97,28 +97,27 @@ section h2 {
 
 /* Estilo para os tópicos da página Missão */
 .missao-page h3 {
-  color: var(--primary); /* Cor roxa para os títulos dos tópicos */
-  font-size: 1.75rem; /* Tamanho confortável para os títulos */
+  color: var(--primary);
+  font-size: 1.75rem;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2); /* Sombreamento suave */
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
   margin-bottom: 1rem;
-  transition: color 0.3s ease, text-shadow 0.3s ease; /* Transição suave de cor */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .missao-page h3:hover {
-  color: var(--highlight); /* Cor de destaque ao passar o mouse */
-  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4); /* Aumenta o sombreamento ao passar o mouse */
+  color: var(--highlight);
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.4);
 }
 
-/* Personalização dos links */
 a {
-  color: #0000EE; /* Azul padrão da web */
-  text-decoration: none; /* Remover sublinhado */
+  color: #0000EE;
+  text-decoration: none;
 }
 
 a:hover {
-  color: #551A8B; /* Cor mais escura de azul para hover */
-  text-decoration: underline; /* Sublinha ao passar o mouse */
+  color: #551A8B;
+  text-decoration: underline;
 }
 
 .footer {
@@ -159,7 +158,6 @@ a:hover {
   margin-top: 1.5rem;
 }
 
-/* Específicos para a página Missão */
 .missao-page .foto-qa {
   position: absolute;
   top: 20px;
@@ -194,4 +192,33 @@ a:hover {
     display: block;
     margin-top: 1rem;
   }
+}
+
+/* Página em construção */
+.em-construcao {
+  background-color: #332700;
+  border: 2px dashed var(--accent);
+  padding: 3rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff8e1;
+  box-shadow: 0 0 12px rgba(255, 127, 0, 0.2);
+  position: relative;
+}
+
+.em-construcao h2 {
+  font-size: 2rem;
+  color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.em-construcao p {
+  font-size: 1.1rem;
+  margin: 0.5rem 0;
+}
+
+.icone-construcao {
+  font-size: 3.5rem;
+  color: var(--accent);
+  margin: 1rem 0;
 }
